@@ -26,29 +26,29 @@ yapılan kıyaslamalar şu şekilde olacaktır:
 biter ve dizimiz kesin olarak sıralanmış olur.
 <----------------------------------------------------------------------------------------------------->
 
-/************************************/
-/*	for (int i = 0; i < n-1; i++)	*/
-/*	{								*/
+/************************************************/
+/*	for (int i = 0; i < n-1; i++)		*/
+/*	{					*/
 /*	if (arr[i] > arr[i+1])			*/
 /*		swap(&arr[i], &arr[i+1]);	*/
-/*	}								*/
-/************************************/
+/*	}					*/
+/************************************************/
 
 
 Döngünün iç kısmı diye adlandırdığım bu for döngüsünde,  arr dizisinin n elamı arasında en büyük olan
 n. sıraya getirilir.
 
-/********************************************/
-/*	while (n > 1)							*/
-/*	{										*/
-/*		for (int i = 0; i < n-1; i++)		*/
-/*		{									*/
+/****************************************************************/
+/*	while (n > 1)						*/
+/*	{							*/
+/*		for (int i = 0; i < n-1; i++)			*/
+/*		{						*/
 /*			if (arr[i] > arr[i+1])			*/
 /*				swap(&arr[i], &arr[i+1]);	*/
-/*		}									*/
-/*		n--;								*/
-/*	}										*/
-/********************************************/
+/*		}						*/
+/*		n--;						*/
+/*	}							*/
+/****************************************************************/
 
 While kısmı ise her döngüde n sayısını bir azaltarak, dizideki tüm elemanların sıralanmasını sağlar.
 Örneğin 5 elemanlı bir dizimiz olsun, for bir kere çalıştığında n=5 için, en büyük olan eleman 5. sıraya
