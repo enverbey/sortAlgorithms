@@ -39,7 +39,7 @@ Döngünün iç kısmı diye adlandırdığım bu for döngüsünde,  arr dizisi
 n. sıraya getirilir.
 
 /********************************************/
-/*	while (n > 1)                           */
+/*  while (n > 1)                           */
 /*  {                                       */
 /*      for (int i = 0; i < n-1; i++)       */
 /*      {                                   */
