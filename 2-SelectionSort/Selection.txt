@@ -1,0 +1,56 @@
+Selection Sort Algoritması :
+	Selection Sort algoritmasının dizinin en küçük elemanını bulur 
+sonra bu elemanı karşılaştırmayı yapmaya başladığı index'teki sayı 
+ile yer değiştirir (swap), karşılaştırma yapmaya 0. indexten başlar ve her döngü
+(içerdeki döngünün bitmesi ve 0. index'e en küçük değerinin getirilmesinden dolayı)
+karşılaştırma yapmaya bir sonraki indexten başlar, dolayısıyla ilk döngü sonunda sıfırıncı
+index'e doğru sayı gelirken (en küçük), ikinci döngü sonunda birinci index'e gelmesi gereken
+sayı gelir. Döngü dizinin uzunluğu kadar devam eder.
+
+	->En küçük elemanı tutmak için "min" isminde bir değişken kullanıldim.
+min değişkeni en küçük sayısının adresini tutabilir (main2.c de yaptığım gibi) 
+yada en küçük sayının dizideki index'ini tutabilir (main.c). İlk başta min'i 
+birinci eleman olarak seçtik ardından tüm elemanlar ile karşılaştırdık eğer "min" 
+değişkeninin tuttuğu değerden daha küçük bir değer var ise min değeri güncellenir 
+ve yeni min bu sayı olur. Böylelikle içerideki for bittiğinde "min" değişkeninin 
+tuttuğu sayı en küçük sayı olur ve for döngüsünün başladığı index ile yer değiştirilir. Bu işlem
+dizinin uzunluğu yani i saysı n'e ulaşana kadar devam eder.
+
+
+	Örnek:
+3, 4, 2, 1, 8, 5
+
+->1. Adım : min değeri 3, şimdi içerideki for döngüsü j yi arttırarak tüm dizeyi dolaşıcak.
+
+min = 3;
+i = 0;
+j = 0;
+
+->2. Adım : j=3 olduğunda döngü if bloğuna girecek ve değerler şu şekilde olacak.
+
+min = 2;
+i = 0
+j = 3
+
+->2. Adım : j=4 olduğunda döngü if bloğuna girecek ve değerler şu şekilde olacak.
+
+min = 1;
+i = 0
+j = 4
+
+Not :	Burada değinmek istediğim bir nokta var.
+	fark ettiyseniz i değişkeninin değerini 0 da tutuyoruz değiştirmiyoruz
+	bunu sebebi içerideki döngü bittiğinde i nin olduğu index'e min değerini getirmek istememizdir. 
+	Ancak bu yer değişikliği yapıldıktan sonra i değerini arttırabiliriz.
+
+Bu adımların sununda min tüm dizi dolaşılmış ve en küçük değeri bulmuş oluruz artık min değerini
+i. indexteki değer ile yer değiştirip, i yi arttırarak döngüye devam edebiliriz.
+
+<-------->	(min ile i. index swap yapılır)
+min = 1;
+i = 1		(i değeri bir artar)
+<-------->
+min = 4	(yeni min değeri belirlenir)
+i = 1
+j = 1	(j 1(i) den başlar ve tüm diziyi gezerek yeni min değerini bulur, döngü i değeri dizi uzunluğuna yani n'e gelene kadar devam eder.)
+<-------->

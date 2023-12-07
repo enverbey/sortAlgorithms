@@ -1,0 +1,28 @@
+/********************************************/
+/*											*/
+/*		Enver Yılmaz						*/
+/*											*/
+/*		Mail : enverbey1534@gmail.com		*/
+/*		Created: 2023/12/07					*/
+/*		Updated: 2023/12/07					*/
+/*											*/
+/********************************************/
+
+Önsöz:
+	Bubble sort algoritması benim için her zaman farklı olmuştur,
+çünkü varlığından haberdar olmadan yazdığım ve arkadaşlarımın "sen
+bubble sort yapmışsın burada" demeleri üzerine fark ettiğim
+bu algoritma aynı zamanda öğrendiğim de ilk sıralama algoritması olmuştur.
+
+	Öğrenmside en kolay sıralama algoritması olduğunu düşündüğüm için, C ile
+sıralama algoritmalarını yaptığım bu projede 1. sıraya bubble sort algoritmasını
+koymayı uygun buldum. Projeyi yapmamın amacı 09.12.2023 tarihinde gerçekleşicek 
+veri yapıları ödevinde sınava girecek arkadaşlarımın algoritmaları kod üzerinde
+görüp incelemelerine olanak sağlamaktır.
+
+	Elimden geldiğince temiz ve anlaşılır kod yazdım, umarım ilgilenen arkadaşlar
+için faydalı olur. Algoritma ve kod açıklamaları eğer yetersiz gelir yada düzeltmek
+eklemek istediğiniz yerler olur ise bunu benimle iletişime geçerek bildirirseniz 
+çok memnun olurum. 
+		-> Herkeze iyi çalışmalar diliyorum. <-
+

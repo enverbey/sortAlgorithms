@@ -1,0 +1,73 @@
+Insertion Sort Algoritması :
+	TANITIM :Bu algoritma özellikle büyük sayıları sıralama işleminde
+diğer birçok sıralama algoritmasına göre çok daha hızlı olduğu için
+en gözde algoritmalardan biridir. Hızlı olması çok güzel bir özellik iken
+kodlanması ve tamamen doğru bir şekilde kullanılması zor bir algoritmadır.
+Öncelikle, quick sort algoritmasını kullanıcak kişinin (ne seviyede bir iş yapıcağına
+bağlı olmak ile beraber) "recursive" konusunu iyi bilmesi ve kodlarında kullanabilmesi
+gerekir.
+
+	AÇIKLAMA : Algoritm diziden herhangi bir sayıyı pivot belirleyerek başlar, ardından
+dizideki tüm elemanları tek tek karşılaştırıp pivottan küçük olanları sol tarafa pivottan
+büyük olanları sağ tarafa sıralar sonrada pivot u ortaya yerleştirir. Bu sayede pivot sayısı
+bulunması gereken index'e gelmiş olur, ayrıca sol ve sağ taraftaki sayılarda küçük büyük şeklinde
+pivota göre yerleşmiş olur ancak her iki tarafta kendi içerisinde sıralanmamış durumdadır. Bu noktadan sonra 
+sol ve sağ taraflar için recursive yapılır ve aynı işlemler tekrarlanır. Ta ki 2 yada 1 sayı kalıp sıralanacak
+bir dize kalmayana kadar recursive devam eder.
+	->Böl ve sırala mantığı üzerine ilerleyen bu algoritma oldukça verimli çalılır.
+
+NOT: seçtiğiniz pivot en büyük yada en küçük ise iki farklı durum oluşur:
+	1. durum : pivot en küçük/büyük olduğu için if bloğu her seferinde çalışır ve 2 ayrı dizi
+sağ-sol olarak ayrılmaz/oluşmaz bu durumda iki defa recursive çağırması yapılamaz.
+	2. durum : pivot en küçük/büyük olduğu için if bloğu asla çağızmaz bu da yine sağ-sol olarak
+dizileri ayırıp recursive yapamıyacağımız anlamına gelir.
+	Bu durumlar yazdığınız kod'a bağlı farklı kontorl veya özel kodlamalar yapmanızı gerektirebilir.
+Kodu yazacak kişinin tüm olasılıkları düşünerek kodlamayı yapması gerekir.
+
+	<------ örneği inceleyelim ------>
+
+
+NOT: sol sağ olarak göstermemin sebebi recursive çalışırken uzunluğu buna göre vermemiz ve 
+anlaşılır olması yoksa dizimizi bölmüyoruz bir bütün olarak tutuyoruz, DİKKAT AMAN!
+
+pivot : 7
+[7, 2, 9, 1, 6, 3, 8, 5]
+[7, 2, 5, 1, 6, 3, 8, 9]
+[2, 5, 1, 6, 3, 7, 8, 9]
+
+sol taraf : [2, 5, 1, 6, 3]
+sağ taraf : [8, 9]
+
+	->pivot	2
+	->[2, 5, 1, 6, 3]
+	->[2, 3, 1, 6, 5]
+	->[2, 6, 1, 3, 5]
+	->[2, 1, 6, 3, 5]
+	->[1, 2, 6, 3, 5]
+
+	sol tarf : [1]
+	sağ taraf : [6, 3, 5]
+
+		pivout : 1
+		return ;	(bu recursive burada biter, TÜM FONKSİYON DEĞİL HA, SADECE BU BÖLÜM BİTİYOR!)
+
+		->pivot 6
+		->[6, 3, 5]
+		->[3, 5, 6]	(ÖZEL DURUM !!, pivot tüm sayılardan büyük sağ sol oluşmaz!!)
+	
+		taraf : [3, 5]
+		
+			->pivot 3
+			->[3, 5]
+	
+	->pivot 8
+	->[8, 9]
+
+Bu tablo kafanızı karıştırdığı ise "quick sort" diye google da arama yaparak görsellere bakmanızı,
+"https://visualgo.net/en/sorting" bu siteye giderek quick sort algoritmasının nasıl çalıştığını gözlemlemenizi
+ve yazdığım kodları incelemenizi tavsiye ediyorum.
+
+ÖĞRENMEK İSTİYORSAN, TEORİDE ÇOK TAKILMA YAPMAK İSTEDİĞİN KODU YAZMAYA BAŞLA TAKILDIKÇA ARAŞTIR, YAPABİLİRSİN...
+
+
+

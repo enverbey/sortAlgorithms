@@ -1,0 +1,58 @@
+Bubble Sort Algoritması :
+	Bubble sort algoritmasının dizinin ilk elemanını bir sonraki 
+ile karşılaştırır ve eğer ilk eleman büyük ise yer değiştirir (swap yapar).
+Ardından index'i bir arttırır yani ikinci elemana geçer ve
+yine bir sonraki eleman ile karşılaştırır. Bu dizinin sonuna kadar devam eder,
+burada dikkat edilmesi gereken nokta index son elemanda değil, bir önceki elemana
+geldiğinde döngü biter çünkü son elemandan sonra bir eleman olmadığı için array'da buraya
+ulaşmaya çalışırsanız hata alırsınız.
+
+	->Özetle bu döngüde, ikili karşılaştırma yapılarak en büyük eleman son'a taşınır.
+	Örneğin 4 eleman olsun dizimizde ilk döngüde şu karşılaştırmalar yapılacaktır.
+->1-2
+->2-3
+->3-4
+
+	Bu karşılaştırmalar sayesinde 4 numaralı sayı artık dizinin en büyük sayısıdır ve
+doğru yere gelmiştir, şimdi iç düngü biter ve dış döngü tekrar çalışır burada dikkat edilmesi
+gereken nokta artık 4 yerleştirildiği için onu kontrol etmemize gerek yoktur bu yüzden 2. adımda
+yapılan kıyaslamalar şu şekilde olacaktır:
+->1-2
+->2-3
+
+	İşlem sonucunda 3 numaraya da gelmesi gereken sayı gelir, bir sonraki karşılaştırma:
+->1-2
+	Şeklinde olur, bu karşılaştırmadan sonra n sayısı 1 olacağı için dışarıdaki while döngüsü
+biter ve dizimiz kesin olarak sıralanmış olur.
+<----------------------------------------------------------------------------------------------------->
+
+/************************************/
+/*	for (int i = 0; i < n-1; i++)	*/
+/*	{								*/
+/*	if (arr[i] > arr[i+1])			*/
+/*		swap(&arr[i], &arr[i+1]);	*/
+/*	}								*/
+/************************************/
+
+
+Döngünün iç kısmı diye adlandırdığım bu for döngüsünde,  arr dizisinin n elamı arasında en büyük olan
+n. sıraya getirilir.
+
+/********************************************/
+/*	while (n > 1)							*/
+/*	{										*/
+/*		for (int i = 0; i < n-1; i++)		*/
+/*		{									*/
+/*			if (arr[i] > arr[i+1])			*/
+/*				swap(&arr[i], &arr[i+1]);	*/
+/*		}									*/
+/*		n--;								*/
+/*	}										*/
+/********************************************/
+
+While kısmı ise her döngüde n sayısını bir azaltarak, dizideki tüm elemanların sıralanmasını sağlar.
+Örneğin 5 elemanlı bir dizimiz olsun, for bir kere çalıştığında n=5 için, en büyük olan eleman 5. sıraya
+getirilecektir ama geri kalan 4 sayı hala sıralanmamıştır işte tüm sayıları sıralamak için n'i bir azaltır
+ve for döngüsünü yeniden başlatırız, for döngüsü bu sefer 4. sıraya en büyük (4 sayı kıyaslanıcağı için bu 4 sayının en büyüğü)
+sayıyı getirir, bu döngü n=2 olup son defa for çalıştıktan sonra n'in 1 olması ile biter, ve int dizimiz
+kesin olarak sıralanmış olur.

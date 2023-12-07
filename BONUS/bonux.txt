@@ -1,0 +1,11 @@
+Bonus kısmına geçmeden önce sıralama algoritmalarını iyice anladığınızdan emin olun.
+
+	Bu kısımda "bubble, selection ve Insertion" algoritmalarını iç içe döngü kullanmak
+yerine recursive kullanarak yaptım. Pek karşılaşmayacanız bu yaklaşım farklı bir yol göstermek
+quick te olduğu gibi diğer sıralama algoritmalarında da recursive kullanılabileceğini anlatmak
+ve recursive konusunda pratik yapmanız için yapılmıştır.
+
+	Eğer kodlara bakmadıysanız önce kendiniz deneyin, basit birkaç değişiklik yaparak
+iç içe for yada while yerine tek döngü ve recursive ile sende bu algoritmaları yapabilirsin..
+
+	KODLAMAKTAN KORKMA, ZEVK AL!!

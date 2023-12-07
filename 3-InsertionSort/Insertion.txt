@@ -1,0 +1,31 @@
+Insertion Sort Algoritması :
+	AÇIKLAMA 1 : i=0 dan başlayarak (n-1) değerine kadar devam eder, ve i. indexteki sayı ile 
+bir sonraki sayıyı (i+1) "küçük->büyük" kontrolü yaparak devam eder, algoritmanın amacı küçükten büyüğe
+sıralamak olduğu için, koşul sağlandığı müddetçe i artmaya devam eder ve i, n-1 değerine gelince son kontorlünü
+de yaparak biter. Eğer sonraki sayı kendisinden sonraki sayıdan büyük ise yanı sıralı olmama durumu var ise:
+
+	AÇIKLAMA 2: Bu algoritma bubble sort gibi ikili karlılaştırma ve yer değiştirme
+üzerinden ilerler. Fark ise şu şekildedir, ikili kıyaslama ile tüm dizi nin
+elemanları karşılaştırılır ve dış döngü biter. Bu karşılaştırmalar sırasında
+eğer bir eleman kendisinden sonraki elemandan büyük ise:
+	
+	->if bloğu yani karşılaştırmayı yapan kontrol bloğu çalışır ve içerideki
+for başlar for döngüsü ileriye değil geriye doğru bir ilerleme yani gidişat izler.
+Önce bu if'e girmeye sebeb olan iyi sayı swap olur, sonra index bir azaltılarak "j--"
+aynı kontrol tekrarlanır içerideki döngü sayı sonraki sayıdan büyük olmadığı durumda "break"
+komutu ile sonlanır ve böylelikle sıfırıncı index'ten if'e girdiğimiz i. index'e kadar olan
+sayılar sıralanmış olur. Bu işlemler i, n-1 değerine gelene kadar devam eder.
+
+
+Yukarıda anlattığım algoritmanın "3, 6, 8, 9, 5..." dizisinin adım adım nasıl sıraladığını gözleyebilirsiniz.
+
+->3 6 7 9 5...	(i = 3 olana kadar döngü if bloğuna girmez)
+->3 6 7 5 9...	(i = 3, olduğunda if çalışır içerideki for başlar)
+->3 6 5 7 9...	(5 sayısı büyük->küçük durumu bozulana kadar for içerisinde swap olarak devam eder)
+->3 5 6 7 9... (3 büyük olmadığı için 5 ten for çalışmayı bitirdi "break" sayesinde ve artık i çalışmaya devam edebilir.)
+
+"3 5 6 7 9" şeklinde dizinin 5 elemanı sıralandı bundan sonra i artmaya
+devam edecek ve her i arttığında 0 dan i ye kadar olan bölüm sıralanmış olacak..
+sıralı ise i artmaya devam edecek, sıralı değil ise if çalışacak ve sıralanacak..
+
+
